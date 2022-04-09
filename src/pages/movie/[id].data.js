@@ -13,11 +13,9 @@ export default function MovieData({ params }) {
       `https://api.themoviedb.org/3/movie/${tmdb_id}/videos?api_key=d0278f3771ae9e001fe1e92efaa54a42&language=en-US`,
       `https://api.themoviedb.org/3/movie/${tmdb_id}/credits?api_key=d0278f3771ae9e001fe1e92efaa54a42&language=en-US`,
       `https://api.themoviedb.org/3/movie/${tmdb_id}/recommendations?api_key=d0278f3771ae9e001fe1e92efaa54a42&language=en-US&page=1`,
-      'https://web-series-quotes-api.deta.dev/quote/',
-      'https://movie-quote-api.herokuapp.com/v1/quote/',
     ];
-    const [odata, tdata, videos, crew, recommendations, quote1, quote2] = await fetchAll(addintionalUrls);
-    return {odata, tdata, videos, crew, recommendations, quote1, quote2}
+    const [odata, tdata, videos, crew, recommendations] = await fetchAll(addintionalUrls);
+    return {odata, tdata, videos, crew, recommendations}
   }
 
   const [data] = createResource(() => `movie/${params.id}`, fetchData);

@@ -22,25 +22,19 @@ export default () => {
           <div class="max-w-screen-xl my-0 mx-auto text-sm">
             <Back />
             <div class="text-sm">
-              <img
-                srcset={
-                  data()
-                    ? `https://image.tmdb.org/t/p/w500${
-                        data().tdata.poster_path
-                      } 500w, https://image.tmdb.org/t/p/original${
-                        data().tdata.poster_path
-                      } 1200w`
-                    : ""
-                }
-                sizes="(max-width: 500px) 500px, 1000px"
+              <div class="flex gap-1 md:px-4 md:w-full">
+            <img
+            class="w-full h-auto md:w-auto md:h-108"
                 src={
                   data()
-                    ? `https://image.tmdb.org/t/p/w300${data().tdata.poster_path}`
+                    ? `https://image.tmdb.org/t/p/w500${data().tdata.poster_path}`
                     : ""
                 }
                 alt=""
               />
-              <div class="text-sm px-4">
+<iframe class="hidden md:block" width="768" height="432" src={`https://www.youtube.com/embed/${data().videos.results[0].key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+              <div class="mt-8 text-sm px-4">
                 <h2>
                   {data().odata.Title.toUpperCase()} <span>({data().odata.Year})</span>
                   {/* <span>
