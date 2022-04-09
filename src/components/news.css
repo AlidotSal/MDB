@@ -1,0 +1,11 @@
+.news ul {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1em;
+  padding: 1em;
+}
+
+.news li {
+  font-size: 1.2rem;
+  background-color: burlywood;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" id='html'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="All the information you need about your favorite Movies, TV Shows and Celebrities.">
+    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+    <link rel="preload" href="./assets/fonts/b.woff2" as="font" type="font/woff2" crossorigin>
+    <style>@font-face {
+      font-family: "BiondiSansW00-Regular";
+      src: url("./assets/fonts/b.woff2") format("woff2");
+      font-display: swap;
+    }.body{font-family: 'BiondiSansW00-Regular';}.search-area{max-width: 500px;margin: 0 auto;display: grid;grid-auto-flow: row;justify-items: center;}.search-bar {padding: 2em 0;}.search-bar label {position: relative;}.search-bar label:before {content: "";position: absolute;left: 0.5em;top: 0;bottom: 0;width: 15px;background: url("/assets/search.svg") center / contain no-repeat;}.search-bar input {color: #1f1f1f;font-family: inherit;height: 2.4em;padding: 1em 3em;border: 1px solid #cdcdcd;border-radius: 0.5em;background-color: #efebef;}.search-bar input:focus{outline: none; box-shadow: 0 0 3px #000;}main.home-lists{max-width: 1100px;margin: 0 auto;}.home-lists .list{border-bottom: 2px solid #333;}.home-lists .list > div{margin: .5em 0;padding: 1em;overflow-x: scroll;display: grid;grid-auto-flow: column;gap: 1em;}.home-lists .list div section{width: 9em;background-color: #f1f1f1;border-radius: 0.2em;box-shadow: 0 1px 13px rgba(0, 0, 0, 0.25), 0 1px 4px rgba(0, 0, 0, 0.2);}</style>
+    <link rel="preconnect" href="https://api.themoviedb.org">
+    <link rel="preconnect" href="https://image.tmdb.org">
+    <title>MyMDb: All the information you need about Movies and TV Shows</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script src="/src/index.jsx" type="module"></script>
+  </body>
+</html>

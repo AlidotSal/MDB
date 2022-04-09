@@ -1,0 +1,48 @@
+.tab-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  width: 100%;
+  height: 9vh;
+  color: black;
+  background-color: white;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+
+.tab-bar.hide {
+  transform: translateY(11vh);
+  transition: all 0.5s;
+}
+
+.app.dark .tab-bar {
+  color: white;
+  background-color: black;
+}
+
+.tab-bar > div {
+  width: 70%;
+  height: 70%;
+  border-radius: 0.5em;
+  background-color: rgb(165, 165, 165);
+}
+
+.tab-bar > div.selected {
+  background-color: rgb(154, 198, 255);
+}
+
+.tab-bar a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+@media (pointer: fine) {
+  .tab-bar {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+.person .photos > div,
+.person .videos > div {
+  margin: 1em 0;
+  width: 100%;
+  padding: 1em;
+  overflow-x: scroll;
+  display: flex;
+  gap: 1em;
+}

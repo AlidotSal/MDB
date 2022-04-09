@@ -1,0 +1,32 @@
+.button-back {
+  position: absolute;
+  cursor: pointer;
+  top: 1.5em;
+  left: 1.2em;
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  padding: 0.9em;
+  opacity: 0.95;
+  transition: all 0.2s;
+}
+
+.button-back {
+  background: var(--white);
+  border: 1px solid var(--button-border);
+}
+
+.button-back.dark {
+  background: var(--dark-button-bg);
+  border: 1px solid var(--button-border);
+}
+
+.button-back:hover {
+  background: var(--light-button-hover);
+}
+
+@media (pointer: fine) {
+  .button-back {
+    display: none;
+  }
+}

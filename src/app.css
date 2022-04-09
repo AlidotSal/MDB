@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "BiondiSansW00-Regular";
+  src: url("./assets/fonts/b.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  /* light theme colors */
+  --white: #fff;
+  --light-bg1: #d7e6e9;
+  --light-bg2: #f9fbfc;
+  --light-text-gray: #595a5c;
+  --light-button-hover: #ddd;
+  --button-border: rgb(70, 70, 70);
+
+  /* dark theme colors */
+  --dark-bg1: #0d181d;
+  --dark-bg2: #101818;
+  --dark-text-gray: #eee;
+  --dark-button-bg: #333;
+  --dark-button-hover: #777;
+}
+
+.app {
+  font-family: "BiondiSansW00-Regular";
+  min-height: 100vh;
+  transition: all 0.1s;
+  background-color: #dfe9ec;
+}
+
+.app.light {
+  color: var(--light-text-gray);
+  background: linear-gradient(
+    180deg,
+    var(--light-bg1) 0%,
+    var(--light-bg2) 50%
+  );
+}
+
+.app.dark {
+  color: var(--dark-text-gray);
+  background: linear-gradient(180deg, var(--dark-bg1) 0%, var(--dark-bg2) 50%);
+  filter: contrast(85%) brightness(105%);
+}
+
+.movie {
+  display: grid;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
