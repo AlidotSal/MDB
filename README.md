@@ -1,7 +1,7 @@
 # TMDb Movie App
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/AlidotSal/MDB/blob/master/LICENCE)
-[![GitHub stars](https://img.shields.io/github/stars/SKempin/reactjs-tmdb-app.svg?style=flat-square)](https://github.com/AlidotSal/MDB/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/SKempin/reactjs-tmdb-app.svg?style=flat-square)](https://github.com/AlidotSal/MDB/network)
+[![GitHub stars](https://img.shields.io/github/stars/AlidotSal/MDB.svg?style=flat-square)](https://github.com/AlidotSal/MDB/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/AlidotSal/MDB.svg?style=flat-square)](https://github.com/AlidotSal/MDB/network)
 
 MDB is a responsive [SolidJS](https://www.solidjs.com/) app that utilises loading data via [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api).
 
