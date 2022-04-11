@@ -1,4 +1,4 @@
-# TMDb Movie App
+# MDB Movie App
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/AlidotSal/MDB/blob/master/LICENCE)
 [![GitHub stars](https://img.shields.io/github/stars/AlidotSal/MDB.svg?style=flat-square)](https://github.com/AlidotSal/MDB/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/AlidotSal/MDB.svg?style=flat-square)](https://github.com/AlidotSal/MDB/network)
