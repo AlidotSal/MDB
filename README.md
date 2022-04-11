@@ -26,6 +26,8 @@ If you would like to download the code and try it for yourself:
 3. start development server `npm run start`
 4. Open your browser at: `http://localhost:3000`
 
+> 🚧 This App is it's very early days and there's some bugs/missing features.
+
 ## License
 [MIT](https://github.com/AlidotSal/MDB/blob/master/LICENCE)
 
