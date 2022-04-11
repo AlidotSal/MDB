@@ -22,10 +22,11 @@
 }
 
 .app {
-  font-family: "BiondiSansW00-Regular";
+  font-family: 'Quicksand', sans-serif;
   min-height: 100vh;
   transition: all 0.1s;
   background-color: #dfe9ec;
+  /* overflow: overlay; */
 }
 
 .app.light {

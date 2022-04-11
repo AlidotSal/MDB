@@ -11,7 +11,7 @@ export default () => {
 
     createEffect(() => {
       data()
-        ? (document.title = `${data()?.Title} (${data()?.Year}) - MyMDb`)
+        ? (document.title = `${data().tdata.name} (${data().tdata.first_air_date.substring(0, 4)}) - MyMDb`)
         : null;
       window.scrollTo(0, 0);
     });
@@ -32,17 +32,17 @@ export default () => {
                 }
                 alt=""
               />
-<iframe class="hidden md:block" width="768" height="432" src={`https://www.youtube.com/embed/${data().videos.results[0].key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="hidden md:block" width="768" height="432" src={`https://www.youtube.com/embed/${data().videos.results.find(v => v.type === "Trailer")?.key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
                 <div class="mt-8 text-sm px-4">
-                  <h2>
-                    {data().odata.Title.toUpperCase()} <span>({data().odata.Year})</span>
+                  <h2 class="uppercase font-bold text-2xl tracking-wider md:text-4xl subpixel-antialiased">
+                    {data().tdata.name.toUpperCase()} <span class="font-normal text-dark-400/90 text-lg md:text-2xl">({data().tdata.first_air_date.substring(0, 4)}-)</span>
                     {/* <span>
                       {data()?.imdbRating} /
                       <span style={`font-size: .5em`}>{data()?.imdbVotes}</span>
                     </span> */}
                   </h2>
-                  <div>
+                  <div class="mt-2 flex">
                     {/* {data()?.Rated} | */} {~~(data().tdata.runtime / 60)}h{" "}
                     {data().tdata.runtime % 60}
                     min |{"  "}
@@ -83,7 +83,8 @@ export default () => {
             </div>
             <hr />
             <Show when={data().recommendations.results.length > 0}>
-              <div class="recommendations">
+            <div class="max-w-screen-xl my-0 mx-auto">
+            <h3 class="px-4">More Like This</h3>
                 <List list={data().recommendations.results} />
               </div>
             </Show>

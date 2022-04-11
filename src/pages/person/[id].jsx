@@ -25,9 +25,10 @@ export default () => {
       <section class="max-w-screen-xl my-0 mx-auto">
           <Back />
           <div class="grid gap-4">
-            <div class="grid gap-4">
-              <div class="flex gap-4">
+            <div class="grid gap-4 p-4">
+              <div class="flex flex-col gap-4 md:flex-row">
               <img
+              class="w-28"
                 src={
                   data().info.profile_path
                     ? `https://image.tmdb.org/t/p/w200${
@@ -86,9 +87,9 @@ export default () => {
               </Show>
             </div>
               <h2>{data().info.name}</h2>
-              </div>
-              </div>
               <p>{data().info.biography}</p>
+              </div>
+              </div>
               <div>
               <p>Birth: {data().info.birthday}</p>
               <Show when={data().info.deathday}>
@@ -99,13 +100,18 @@ export default () => {
               <p>born in: {data().info.place_of_birth}</p>
               </div>
             </div>
-            <div class="flex gap-6 overflow-x-scroll">
+            <Show when={data().images.profiles.length > 1}>
+            <div class="p-4">
+              <h3 class="text-normal">Photos</h3>
+            <div class="flex gap-6 overflow-x-auto">
                 <For each={data().images.profiles}>
                   {(img) => (<img class="w-24" src={`https://image.tmdb.org/t/p/w200${img.file_path}`} />)}
                 </For>
             </div>
-              <div class="credits">
-                <h4>Known For:</h4>
+            </div>
+            </Show>
+            <div class="max-w-screen-xl my-0 mx-auto">
+                <h4 class="px-4">Known For:</h4>
                 <List list={data().credit.cast.slice(0, 10)} />
               </div>
           </div>

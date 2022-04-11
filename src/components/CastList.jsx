@@ -12,9 +12,8 @@ export default (props) => {
 
 
   return (
-    <div className="w-full overflow-hidden text-[#1f1f1f]">
-      <h5>Cast:</h5>
-      <ul class="w-screen grid grid-flow-col auto-cols-max items-center gap-8 overflow-x-scroll md:grid-flow-row md:w-240 md:grid md:grid-cols-6 md:gap-6 md:overflow-x-hidden">
+    <div className="w-full my-2 py-4 overflow-hidden text-[#1f1f1f] border-t-1 border-b-0 border-r-0 border-l-0 border-dark-50/30">
+      <ul class="w-screen px-1 grid grid-flow-col auto-cols-max gap-8 overflow-x-scroll md:grid-flow-row md:w-240 md:grid md:grid-cols-6 md:gap-6 md:overflow-x-hidden">
         {
           <For each={props.crew?.cast.slice(0, 12)}>
             {(actor) => (
@@ -22,7 +21,7 @@ export default (props) => {
                 <div>
                   <Link href={`/person/${actor.id}`}>
                     <img
-                    class="object-cover w-13 h-13 rounded-1/2 md:w-90% md:h-auto md:rounded-lg"
+                    class="object-cover w-13 h-13 rounded-1/2 shadow-even-white md:w-80% md:h-auto md:rounded-lg md:shadow-none"
                       src={
                         actor.profile_path
                           ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
@@ -36,7 +35,7 @@ export default (props) => {
                 <div className="text-xs text-sky-800 md:text-sm">
                   <Link class="font-semibold" href={`/person/${actor.id}`}>
                     <For each={splitName(actor.name)}>
-                      {(name) => <p class="md:leading-none">{name}</p>}
+                      {(name) => <p class="leading-none">{name}</p>}
                     </For>
                   </Link>
                   <span class="text-gray-400">{actor.character.split("/").pop()}</span>
@@ -46,9 +45,6 @@ export default (props) => {
           </For>
         }
         <li>
-          <Link style={`margin-right: 2em`} href={`/crew`}>
-            see All
-          </Link>
         </li>
       </ul>
     </div>

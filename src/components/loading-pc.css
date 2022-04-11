@@ -6,11 +6,12 @@
 .loading-text {
   height: 100px;
   line-height: 100px;
+  font-weight: 700;
 }
 .loading-text span {
   display: inline-block;
   margin: 0 0.4em;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .app.light .loading-text span {
   color: var(--dark-bg1);
