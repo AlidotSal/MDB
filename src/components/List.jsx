@@ -19,7 +19,7 @@ export default (props) => {
   return (
     <Show when={data()}>
     <div class="list">
-      <div class="w-full my-4 p-4 flex gap-6">
+      <div class="w-full my-4 p-4 flex gap-6 overflow-x-auto">
         <For each={props.list}>
           {(item, i) => (
             <Link

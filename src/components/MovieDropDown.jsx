@@ -43,7 +43,7 @@ export default () => {
             ref={inputRef}
             type="text"
             onChange={(e) => handleInput(e.target.value)}
-            placeholder="type a movie title"
+            placeholder="search for a movie, tv show ..."
           ></input>
           <span
             onClick={() => {

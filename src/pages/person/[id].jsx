@@ -2,7 +2,6 @@ import { useRouteData } from "solid-app-router";
 import {  createEffect, Show, Suspense } from "solid-js";
 import Videos from "../../components/Videos";
 import List from "../../components/List";
-import Back from "../../components/BackButton";
 import instagram from "../../assets/images/instagram.svg";
 import twitter from "../../assets/images/twitter.svg";
 import facebook from "../../assets/images/facebook.svg";
@@ -23,7 +22,6 @@ export default () => {
     <Suspense fallback={<Loading />}>
     <Show when={data()}>
       <section class="max-w-screen-xl my-0 mx-auto">
-          <Back />
           <div class="grid gap-4">
             <div class="grid gap-4 p-4">
               <div class="flex flex-col gap-4 md:flex-row">
@@ -47,7 +45,7 @@ export default () => {
                     rel="noopener noreferrer"
                     href={`https://www.imdb.com/name/${data().externals.imdb_id}/`}
                   >
-                    <img class="w-8" src={imdb} alt="" />
+                    <img class="w-6 md:w-8" src={imdb} alt="" />
                   </a>
                 </div>
                 </Show>
@@ -59,7 +57,7 @@ export default () => {
                     rel="noopener noreferrer"
                     href={`https://www.facebook.com/${data().externals.facebook_id}/`}
                   >
-                    <img class="w-8" src={facebook} alt="" />
+                    <img class="w-6 md:w-8" src={facebook} alt="" />
                   </a>
                 </div>
               </Show>
@@ -70,7 +68,7 @@ export default () => {
                     rel="noopener noreferrer"
                     href={`https://www.instagram.com/${data().externals.instagram_id}/`}
                   >
-                    <img class="w-8" src={instagram} alt="" />
+                    <img class="w-6 md:w-8" src={instagram} alt="" />
                   </a>
                 </div>
               </Show>
@@ -81,7 +79,7 @@ export default () => {
                     rel="noopener noreferrer"
                     href={`https://www.twitter.com/${data().externals.twitter_id}/`}
                   >
-                    <img class="w-8" src={twitter} alt="" />
+                    <img class="w-6 md:w-8" src={twitter} alt="" />
                   </a>
                 </div>
               </Show>

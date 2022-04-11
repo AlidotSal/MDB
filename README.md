@@ -20,7 +20,7 @@ Key tools used in this React project are:
 
 If you would like to download the code and try it for yourself:
 
-1. Clone the repo: `git@github.com:SKempin/mdb.git`
+1. Clone the repo: `https://github.com/AlidotSal/MDB.git`
 2. `cd MDB`
 2. Install packages: `pnpm install`
 3. start development server `npm run start`

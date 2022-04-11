@@ -3,7 +3,7 @@ import List from "./List";
 export default (props) => {
 
   return (
-    <main class="home-lists">
+    <main class="home-lists mt-12">
       <div class="upcoming">
         <h3>Coming Soon To Theaters:</h3>
         {props.data.upcoming && <List list={props.data.upcoming.results} />}
