@@ -1,19 +1,38 @@
-import { createSignal } from "solid-js";
+import { createSignal, createEffect } from "solid-js";
 import { Link } from "solid-app-router";
 import {createClickOutside} from '../utils/clickOutside'
+import fetchAll from "../utils/fetchAll";
 
 export default () => {
-  const [list, setList] = createSignal(null);
+  const [list, setList] = createSignal([]);
+  const [exIDs, setExIDs] = createSignal([]);
   let inputRef;
-  const dropdownRef = createClickOutside(() => setList(null));
+  const dropdownRef = createClickOutside(() => setList([]));
 
   function handleInput(input) {
+    if(input) {
     fetch(
-      `https://www.omdbapi.com/?apikey=bfd0caba&s=${input.split(" ").join("+")}`
+      `https://api.themoviedb.org/3/search/multi?api_key=d0278f3771ae9e001fe1e92efaa54a42&query=${input
+        .split(" ")
+        .join("+")}`
     )
       .then((res) => res.json())
-      .then((data) => setList(data?.Search));
+      .then((data) => setList(data?.results));
+  } else {
+    setList([]);
   }
+  }
+
+  createEffect(() => {
+    const dataUrls = list()
+    .map(
+      (item) =>
+        `https://api.themoviedb.org/3/${item.media_type ?? "movie"}/${
+          item.id
+        }/external_ids?api_key=d0278f3771ae9e001fe1e92efaa54a42&language=en-US`
+    );
+  fetchAll(dataUrls).then(array => setExIDs(array));
+})
 
   return (
     <div>
@@ -33,25 +52,28 @@ export default () => {
               setList(null);
             }}
             class="absolute block top-3px right-10px w-4 height-4 cursor-ponter bg-[url('/assets/images/clear.svg')]"
-          ></span>
+          >
+          </span>
         </label>
-      <Show when={list()}>
+      <Show when={list().length > 0}>
         <ul ref={dropdownRef} class="absolute top-16 w-85% md:w-120 h-160 overflow-auto py-4 flex flex-col gap-2 text-stone-700 border rounded border-gray-100 bg-[#ebebe2] shadow-md shadow-gray-600">
           <For each={list()}>
-            {(item) => (
+            {(item, i) => (
                 <li class="w-95% h-16 my-0 mx-auto cursor-pointer rounded border border-solid border-gray-400 bg-white shadow-sm shadow-gray-600 transition-all hover:bg-gray-100 hover:text-shadow hover:shadow">
                   <Link
                   class="flex gap-4"
-                  href={`/${item.Type === "movie" ? "movie" : "tv"}/${
-                  item.imdbID
-                }`}
+                  href={`/${item.media_type}/${exIDs() ? exIDs()[i()]?.imdb_id : ''}`}
               >
-                  <img class="w-10" src={item.Poster} />
+                  <img class="w-10" src={`https://image.tmdb.org/t/p/w200${
+                      item.poster_path || item.profile_path
+                    }`} />
                   <div class="flex flex-col justify-evenly">
-                    <h3 class="text-yellow-800 text-xs">{item.Title}</h3>
+                    <h3 class="text-yellow-800 text-xs">{item.title || item.name}</h3>
                     <div class="flex gap-8">
-                      <p class="text-sm">{item.Year}</p>
-                      <p class="text-xs">{item.Type}</p>
+                      <Show when={item.release_date}>
+                      <p class="text-sm">{item.release_date.split("-")[0]}</p>
+                      </Show>
+                      <p class="text-xs">{item.media_type}</p>
                     </div>
                   </div>
                   </Link>

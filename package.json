@@ -1,12 +1,25 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "My solid + vite project",
+  "name": "mdb",
+  "version": "0.1.0",
+  "description": "A source for movie, TV and celebrities content built with SolidJS ",
+  "info": "You can get lots of information about movies, TV shows and actors from this source. This is a very early version of the source and it will get new features added in the future.",
+  "homepage": "https://www.my-solidhack-submission.com",
+  "contributors": [
+    {
+      "name": "Ali",
+      "email": "ali.mekanik7@gmail.com",
+      "url": "https://mdb-beryl.vercel.app/"
+    }
+  ],
+  "keywords": [
+    "solidhack",
+    "best_app"
+  ],
+  "license": "MIT",
   "scripts": {
     "start": "vite",
     "build": "vite build"
   },
-  "license": "ISC",
   "devDependencies": {
     "unocss": "^0.30.11",
     "vite": "^2.9.1",
