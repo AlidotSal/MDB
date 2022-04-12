@@ -108,7 +108,7 @@ export default () => {
             </div>
             </div>
             </Show>
-            <div class="max-w-screen-xl my-0 mx-auto">
+            <div class="max-w-screen-xl w-64 my-0 mx-auto">
                 <h4 class="px-4">Known For:</h4>
                 <List list={data().credit.cast.slice(0, 10)} />
               </div>
