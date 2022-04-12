@@ -20,7 +20,7 @@ export default () => {
       </picture>
       <div class="absolute bottom-0 w-full mx-auto md:w-50% md:left-0 md:right-0">
         <figure class="my-0 py-4 color-white bg-dark-100/50">
-          <blockquote class="m-0 p-4 text-sm rounded-2 md:text-lg" cite="https://movie-quote-api.herokuapp.com/">
+          <blockquote class="m-0 px-4 py-2 text-sm rounded-2 md:text-lg" cite="https://movie-quote-api.herokuapp.com/">
             <p>{data().quote.quote}</p>
           </blockquote>
           <figcaption class="text-base">—{data().quote.role}, <cite>{data().quote.show}</cite></figcaption>

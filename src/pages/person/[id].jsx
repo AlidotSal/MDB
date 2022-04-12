@@ -101,15 +101,15 @@ export default () => {
             <Show when={data().images.profiles.length > 1}>
             <div class="p-4">
               <h3 class="text-normal">Photos</h3>
-            <div class="flex gap-6 overflow-x-auto">
+            <div class="w-full flex gap-6 overflow-x-auto">
                 <For each={data().images.profiles}>
                   {(img) => (<img class="w-24" src={`https://image.tmdb.org/t/p/w200${img.file_path}`} />)}
                 </For>
             </div>
             </div>
             </Show>
-            <div class="max-w-screen-xl w-64 my-0 mx-auto">
-                <h4 class="px-4">Known For:</h4>
+            <div class="max-w-screen-xl w-96 my-0 mx-auto">
+                <h4 class="px-4 font-bold text-lg">Known For:</h4>
                 <List list={data().credit.cast.slice(0, 10)} />
               </div>
           </div>

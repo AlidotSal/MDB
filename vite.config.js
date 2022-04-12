@@ -12,7 +12,7 @@ export default defineConfig({
 				[
 					"shadow-even-white",
 					{
-						"box-shadow": "0 0 0 1px rgb(255 255 255 / .6), 0 0 1px 1px rgb(0 0 0 / .5)",
+						"box-shadow": "0 0 0 1px rgb(255 255 255 / .75), 0 0 1px 1px rgb(0 0 0 / .35)",
 					},
 				],
 			],

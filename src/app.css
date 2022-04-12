@@ -5,7 +5,7 @@
   --light-bg2: #f9fbfc;
   --light-text-gray: #595a5c;
   --light-button-hover: #ddd;
-  --button-border: rgb(70, 70, 70);
+  --button-border: rgb(0 0 0 / .4);
 
   /* dark theme colors */
   --dark-bg1: #0d181d;

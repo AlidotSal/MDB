@@ -17,7 +17,7 @@ export default (props) => {
         {
           <For each={props.crew?.cast.slice(0, 12)}>
             {(actor) => (
-              <li class="flex items-center gap-2 md:flex md:flex-col md:items-start md:text-xs">
+              <li class="flex items-center gap-2 py-1 md:flex md:flex-col md:items-start md:py-0 md:text-xs">
                 <div>
                   <Link href={`/person/${actor.id}`}>
                     <img
@@ -35,7 +35,7 @@ export default (props) => {
                 <div className="text-xs text-sky-800 md:text-sm">
                   <Link class="font-semibold" href={`/person/${actor.id}`}>
                     <For each={splitName(actor.name)}>
-                      {(name) => <p class="leading-none font-bold">{name}</p>}
+                      {(name) => <p class="leading-none font-bold text-sm">{name}</p>}
                     </For>
                   </Link>
                   <span class="text-gray-400 leading-normal">{actor.character.split("/").pop()}</span>
