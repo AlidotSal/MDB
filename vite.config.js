@@ -11,7 +11,9 @@ export default defineConfig({
 				["overflow-overlay", { overflow: "overlay" }],
 				[
 					"shadow-even-white",
-					{ "box-shadow": "0 0 0 1px #fff, 0 0 1px 1px #333" },
+					{
+						"box-shadow": "0 0 0 1px rgb(255 255 255 / .6), 0 0 1px 1px rgb(0 0 0 / .5)",
+					},
 				],
 			],
 		}),

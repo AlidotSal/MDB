@@ -3,8 +3,8 @@ import { useRouteData } from "solid-app-router";
 import MovieDropDown from "../../components/MovieDropDown";
 import Trending from "../../components/Trending";
 import Loading from "../../components/Loading";
-import BGPhone from '../../assets/images/bg-phone.png';
-import BGWide from '../../assets/images/bg-wide.png';
+import BGPhone from '../../assets/images/bg-phone-r.webp';
+import BGWide from '../../assets/images/bg-wide.webp';
 
 export default () => {
   const data = useRouteData();

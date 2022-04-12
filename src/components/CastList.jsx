@@ -13,7 +13,7 @@ export default (props) => {
 
   return (
     <div className="w-full my-2 py-4 overflow-hidden text-[#1f1f1f] border-t-1 border-b-0 border-r-0 border-l-0 border-dark-50/30">
-      <ul class="w-screen px-1 grid grid-flow-col auto-cols-max gap-8 overflow-x-scroll md:grid-flow-row md:w-240 md:grid md:grid-cols-6 md:gap-6 md:overflow-x-hidden">
+      <ul class="w-screen px-1 grid grid-flow-col auto-cols-max gap-6 overflow-x-scroll md:grid-flow-row md:w-240 md:grid md:grid-cols-6 md:overflow-x-hidden">
         {
           <For each={props.crew?.cast.slice(0, 12)}>
             {(actor) => (
@@ -35,10 +35,10 @@ export default (props) => {
                 <div className="text-xs text-sky-800 md:text-sm">
                   <Link class="font-semibold" href={`/person/${actor.id}`}>
                     <For each={splitName(actor.name)}>
-                      {(name) => <p class="leading-none">{name}</p>}
+                      {(name) => <p class="leading-none font-bold">{name}</p>}
                     </For>
                   </Link>
-                  <span class="text-gray-400">{actor.character.split("/").pop()}</span>
+                  <span class="text-gray-400 leading-normal">{actor.character.split("/").pop()}</span>
                 </div>
               </li>
             )}

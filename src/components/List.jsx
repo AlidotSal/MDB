@@ -29,7 +29,7 @@ export default (props) => {
             >
               <section class="w-32 shadow-md shadow-dark-100/50">
                 <img
-                  src={`https://image.tmdb.org/t/p/w200${item.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
                   width="200"
                   height="300"
                   alt={item.title || item.name}

@@ -35,7 +35,7 @@ export default () => {
 <iframe class="hidden md:block" width="768" height="432" src={`https://www.youtube.com/embed/${data().videos.results.find(v => v.type === "Trailer").key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
               <div class="my-4 text-sm px-4">
-                <h2 class="uppercase font-bold text-2xl tracking-wider md:text-4xl subpixel-antialiased">
+                <h2 class="uppercase font-bold text-2xl tracking-wide md:text-4xl subpixel-antialiased">
                   {data().tdata.title} <span class="font-normal text-dark-400/90 text-lg">({data().tdata.release_date.substring(0, 4)})</span>
                   {/* <span>
                     {data()?.imdbRating} /

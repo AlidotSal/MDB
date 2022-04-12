@@ -1,9 +1,3 @@
-@font-face {
-  font-family: "BiondiSansW00-Regular";
-  src: url("./assets/fonts/b.woff2") format("woff2");
-  font-display: swap;
-}
-
 :root {
   /* light theme colors */
   --white: #fff;
@@ -19,6 +13,11 @@
   --dark-text-gray: #eee;
   --dark-button-bg: #333;
   --dark-button-hover: #777;
+}
+
+h1,
+h2 {
+  font-family: 'Cabin', sans-serif;
 }
 
 .app {
